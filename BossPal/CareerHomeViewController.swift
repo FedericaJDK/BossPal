@@ -1,26 +1,30 @@
 //
-//  HomeViewController.swift
+//  CareerHomeViewController.swift
 //  BossPal
 //
-//  Created by Federica D’Alvano on 6/28/22.
+//  Created by Federica D’Alvano on 6/29/22.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class CareerHomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var homeLabel: UILabel!
     
-    @IBAction func goalButton(_ sender: Any) {
-    }
-    @IBAction func resourcesButton(_ sender: Any) {
+    @IBOutlet weak var titleText: UILabel!
+    @IBAction func passionsButton(_ sender: Any) {
     }
     
+    @IBAction func strengthsButton(_ sender: Any) {
+    }
+    @IBAction func gettingButton(_ sender: Any) {
+    }
+    @IBAction func yourWhyButton(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 

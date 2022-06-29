@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AEA8AE9286CA6550089423F /* GoalsInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEA8AE8286CA6550089423F /* GoalsInitialViewController.swift */; };
+		0AEA8AEB286CA76A0089423F /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEA8AEA286CA76A0089423F /* ResourcesViewController.swift */; };
+		0AEA8AED286CA7D70089423F /* CollegeHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEA8AEC286CA7D70089423F /* CollegeHomeViewController.swift */; };
+		0AEA8AEF286CA8660089423F /* CareerHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEA8AEE286CA8660089423F /* CareerHomeViewController.swift */; };
+		0AEA8AF1286CA8F00089423F /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEA8AF0286CA8F00089423F /* ToDo.swift */; };
 		0AED957D286B8A9B0062DEE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED957C286B8A9B0062DEE2 /* AppDelegate.swift */; };
 		0AED957F286B8A9B0062DEE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED957E286B8A9B0062DEE2 /* SceneDelegate.swift */; };
 		0AED9581286B8A9B0062DEE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AED9580286B8A9B0062DEE2 /* ViewController.swift */; };
@@ -38,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AEA8AE8286CA6550089423F /* GoalsInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsInitialViewController.swift; sourceTree = "<group>"; };
+		0AEA8AEA286CA76A0089423F /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
+		0AEA8AEC286CA7D70089423F /* CollegeHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeHomeViewController.swift; sourceTree = "<group>"; };
+		0AEA8AEE286CA8660089423F /* CareerHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerHomeViewController.swift; sourceTree = "<group>"; };
+		0AEA8AF0286CA8F00089423F /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		0AED9579286B8A9B0062DEE2 /* BossPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BossPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AED957C286B8A9B0062DEE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AED957E286B8A9B0062DEE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,8 +116,13 @@
 				0AED957C286B8A9B0062DEE2 /* AppDelegate.swift */,
 				0AED957E286B8A9B0062DEE2 /* SceneDelegate.swift */,
 				0AED9580286B8A9B0062DEE2 /* ViewController.swift */,
-				0AED9582286B8A9B0062DEE2 /* Main.storyboard */,
 				0AED95AF286B8D770062DEE2 /* HomeViewController.swift */,
+				0AEA8AE8286CA6550089423F /* GoalsInitialViewController.swift */,
+				0AEA8AEA286CA76A0089423F /* ResourcesViewController.swift */,
+				0AEA8AEC286CA7D70089423F /* CollegeHomeViewController.swift */,
+				0AEA8AEE286CA8660089423F /* CareerHomeViewController.swift */,
+				0AEA8AF0286CA8F00089423F /* ToDo.swift */,
+				0AED9582286B8A9B0062DEE2 /* Main.storyboard */,
 				0AED9588286B8A9C0062DEE2 /* Assets.xcassets */,
 				0AED958A286B8A9C0062DEE2 /* LaunchScreen.storyboard */,
 				0AED958D286B8A9C0062DEE2 /* Info.plist */,
@@ -265,9 +280,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AED95B0286B8D770062DEE2 /* HomeViewController.swift in Sources */,
+				0AEA8AF1286CA8F00089423F /* ToDo.swift in Sources */,
 				0AED9587286B8A9B0062DEE2 /* BossPal.xcdatamodeld in Sources */,
 				0AED9581286B8A9B0062DEE2 /* ViewController.swift in Sources */,
+				0AEA8AEB286CA76A0089423F /* ResourcesViewController.swift in Sources */,
 				0AED957D286B8A9B0062DEE2 /* AppDelegate.swift in Sources */,
+				0AEA8AED286CA7D70089423F /* CollegeHomeViewController.swift in Sources */,
+				0AEA8AE9286CA6550089423F /* GoalsInitialViewController.swift in Sources */,
+				0AEA8AEF286CA8660089423F /* CareerHomeViewController.swift in Sources */,
 				0AED957F286B8A9B0062DEE2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

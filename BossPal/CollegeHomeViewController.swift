@@ -1,25 +1,30 @@
 //
-//  HomeViewController.swift
+//  CollegeHomeViewController.swift
 //  BossPal
 //
-//  Created by Federica D’Alvano on 6/28/22.
+//  Created by Federica D’Alvano on 6/29/22.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class CollegeHomeViewController: UIViewController {
+    @IBOutlet weak var titleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var homeLabel: UILabel!
+    @IBAction func howToButton(_ sender: UIButton) {
+    }
     
-    @IBAction func goalButton(_ sender: Any) {
+    @IBAction func CollegeAdviceButton(_ sender: UIButton) {
     }
-    @IBAction func resourcesButton(_ sender: Any) {
+    @IBAction func applicationButton(_ sender: UIButton) {
     }
+    @IBAction func transitionButton(_ sender: UIButton) {
+    }
+    
     
     /*
     // MARK: - Navigation

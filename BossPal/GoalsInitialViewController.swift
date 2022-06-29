@@ -1,24 +1,24 @@
 //
-//  HomeViewController.swift
+//  GoalsInitialViewController.swift
 //  BossPal
 //
-//  Created by Federica D’Alvano on 6/28/22.
+//  Created by Federica D’Alvano on 6/29/22.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class GoalsInitialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var homeLabel: UILabel!
     
-    @IBAction func goalButton(_ sender: Any) {
+    @IBAction func bigGoalsButton(_ sender: Any) {
     }
-    @IBAction func resourcesButton(_ sender: Any) {
+    @IBOutlet weak var goalsLabel: UILabel!
+    @IBAction func habitTrackerButton(_ sender: Any) {
     }
     
     /*

@@ -1,24 +1,24 @@
 //
-//  HomeViewController.swift
+//  ResourcesViewController.swift
 //  BossPal
 //
-//  Created by Federica D’Alvano on 6/28/22.
+//  Created by Federica D’Alvano on 6/29/22.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class ResourcesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var homeLabel: UILabel!
+    @IBOutlet weak var resourcesLabel: UILabel!
     
-    @IBAction func goalButton(_ sender: Any) {
+    @IBAction func collegeButton(_ sender: Any) {
     }
-    @IBAction func resourcesButton(_ sender: Any) {
+    @IBAction func careerButton(_ sender: Any) {
     }
     
     /*

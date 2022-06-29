@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S61-lB-Qub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3258" y="690"/>
+            <point key="canvasLocation" x="-3261" y="402"/>
         </scene>
         <!--Goals -->
         <scene sceneID="XRF-8S-WC4">
@@ -204,12 +204,12 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <segue destination="Orj-0h-Y8Q" kind="show" id="5Kl-wv-oDm"/>
+                        <segue destination="Orj-0h-Y8Q" kind="show" identifier="moveToComplete" id="5Kl-wv-oDm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4W-op-MpY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2300" y="690"/>
+            <point key="canvasLocation" x="-2300" y="401.78571428571428"/>
         </scene>
         <!--Complete To Do View Controller-->
         <scene sceneID="8fT-Hs-VGi">
@@ -246,7 +246,145 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sye-As-psF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2300" y="1390"/>
+            <point key="canvasLocation" x="-2300" y="1126"/>
+        </scene>
+        <!--habit tracker-->
+        <scene sceneID="aje-tv-N8N">
+            <objects>
+                <tableViewController id="bgD-GU-HHV" customClass="HabitTrackerTableViewController" customModule="BossPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="m9F-T9-VD9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mzD-et-3RR">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mzD-et-3RR" id="jPS-DV-xDH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bgD-GU-HHV" id="NLg-oI-Q4O"/>
+                            <outlet property="delegate" destination="bgD-GU-HHV" id="pIG-CH-p65"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="habit tracker" id="Jh5-LV-SYx">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="74I-wo-w5d">
+                            <connections>
+                                <segue destination="q2Q-AD-aPI" kind="show" id="ZGB-P2-qHg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="N0F-Nw-sIr" kind="show" identifier="completeR" id="o9Q-Oy-ulj"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRI-UK-MQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2300" y="2134"/>
+        </scene>
+        <!--Complete Habit View Controller-->
+        <scene sceneID="XKk-gn-3DQ">
+            <objects>
+                <viewController id="N0F-Nw-sIr" customClass="CompleteHabitViewController" customModule="BossPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tDk-pm-sl2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXt-8e-oX0">
+                                <rect key="frame" x="142" y="100" width="130" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qt1-Jr-QYG">
+                                <rect key="frame" x="164" y="182" width="87" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Complete"/>
+                                <connections>
+                                    <action selector="completeButton:" destination="N0F-Nw-sIr" eventType="touchUpInside" id="cBC-Gm-AOw"/>
+                                    <action selector="completeTapped:" destination="Orj-0h-Y8Q" eventType="touchUpInside" id="0tO-PB-3dJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gVh-Jn-Lwb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YR6-mP-tXe"/>
+                    <connections>
+                        <outlet property="goalNameLabel" destination="bXt-8e-oX0" id="Lwa-hA-mMu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9EX-up-Ogu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2287" y="2859"/>
+        </scene>
+        <!--Add Habit View Controller-->
+        <scene sceneID="q8h-s5-qjn">
+            <objects>
+                <viewController id="q2Q-AD-aPI" customClass="AddHabitViewController" customModule="BossPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ijl-av-2c4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="run 1 mile..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VmN-bK-NYU">
+                                <rect key="frame" x="66" y="169" width="283" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="habitText:" destination="q2Q-AD-aPI" eventType="editingDidEnd" id="9dk-MN-IqC"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Priority!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR9-ZH-LQ2">
+                                <rect key="frame" x="66" y="237" width="99" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="etg-Ph-Xwt">
+                                <rect key="frame" x="266" y="232" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchPriority:" destination="q2Q-AD-aPI" eventType="valueChanged" id="gza-Ah-pKo"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4l-gH-lgp">
+                                <rect key="frame" x="144" y="271" width="127" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="commit"/>
+                                <connections>
+                                    <action selector="addButton:" destination="q2Q-AD-aPI" eventType="touchUpInside" id="rsn-bV-jll"/>
+                                    <action selector="addTapped:" destination="tbd-81-fBq" eventType="touchUpInside" id="ZI0-0S-xaS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="what new habit do yoou want to build?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCh-ce-PSu">
+                                <rect key="frame" x="40" y="56" width="335" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qhs-c7-wn7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="em2-6H-51P"/>
+                    <connections>
+                        <outlet property="priorityLabel" destination="DR9-ZH-LQ2" id="eph-ea-Lp3"/>
+                        <outlet property="titleLabel" destination="xCh-ce-PSu" id="5nn-Ux-a6X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GII-pw-KLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3262.3188405797105" y="2132.8125"/>
         </scene>
         <!--Goals Initial View Controller-->
         <scene sceneID="xEM-Th-nKE">
@@ -274,6 +412,7 @@
                                 <connections>
                                     <action selector="habitTrackerButton:" destination="oi1-3L-rm0" eventType="touchUpInside" id="TcQ-9i-4QG"/>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o4V-6B-Qb5"/>
+                                    <segue destination="MNY-VW-RIy" kind="show" id="JlW-Ke-ci1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWb-9s-ELU">
@@ -472,7 +611,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zn-xv-dLf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1326" y="2156"/>
+            <point key="canvasLocation" x="2157" y="2288"/>
         </scene>
         <!--Career Home View Controller-->
         <scene sceneID="EYu-ld-Dgn">
@@ -564,7 +703,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RR6-i7-KlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3136" y="2156"/>
+            <point key="canvasLocation" x="4044.9275362318845" y="2155.5803571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XQP-Fk-Z3g">
@@ -583,7 +722,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zns-2N-bex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1378" y="690"/>
+            <point key="canvasLocation" x="-1401" y="402"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EMI-P1-O0m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MNY-VW-RIy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="BPy-uB-RaQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V5x-0r-4Sg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bgD-GU-HHV" kind="relationship" relationship="rootViewController" id="CQi-dV-fTo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XGT-Ii-9Kd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1401" y="2133"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

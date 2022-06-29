@@ -28,7 +28,6 @@ class CompleteToDoViewController: UIViewController {
         
         if let theToDo = selectedToDo{
             context.delete(theToDo)
-            navigationController?.popViewController(animated: true)
         }
     }
     

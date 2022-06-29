@@ -13,6 +13,7 @@
 		0A183582286CD32D008DD2CA /* HabitTrackerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A183581286CD32D008DD2CA /* HabitTrackerTableViewController.swift */; };
 		0A183584286CD3AE008DD2CA /* AddHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A183583286CD3AE008DD2CA /* AddHabitViewController.swift */; };
 		0A183586286CD531008DD2CA /* CompleteHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A183585286CD531008DD2CA /* CompleteHabitViewController.swift */; };
+		0A183588286CD848008DD2CA /* CongratsToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A183587286CD848008DD2CA /* CongratsToDoViewController.swift */; };
 		0AEA8AE9286CA6550089423F /* GoalsInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEA8AE8286CA6550089423F /* GoalsInitialViewController.swift */; };
 		0AEA8AEB286CA76A0089423F /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEA8AEA286CA76A0089423F /* ResourcesViewController.swift */; };
 		0AEA8AED286CA7D70089423F /* CollegeHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEA8AEC286CA7D70089423F /* CollegeHomeViewController.swift */; };
@@ -55,6 +56,7 @@
 		0A183581286CD32D008DD2CA /* HabitTrackerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackerTableViewController.swift; sourceTree = "<group>"; };
 		0A183583286CD3AE008DD2CA /* AddHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitViewController.swift; sourceTree = "<group>"; };
 		0A183585286CD531008DD2CA /* CompleteHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteHabitViewController.swift; sourceTree = "<group>"; };
+		0A183587286CD848008DD2CA /* CongratsToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsToDoViewController.swift; sourceTree = "<group>"; };
 		0AEA8AE8286CA6550089423F /* GoalsInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsInitialViewController.swift; sourceTree = "<group>"; };
 		0AEA8AEA286CA76A0089423F /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
 		0AEA8AEC286CA7D70089423F /* CollegeHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeHomeViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				0A18357B286CB275008DD2CA /* AddToDoViewControllerViewController.swift */,
 				0A18357D286CB29D008DD2CA /* CompleteToDoViewController.swift */,
 				0AEA8AF0286CA8F00089423F /* ToDo.swift */,
+				0A183587286CD848008DD2CA /* CongratsToDoViewController.swift */,
 				0A18357F286CB2BA008DD2CA /* ToDoTableViewController.swift */,
 				0A183581286CD32D008DD2CA /* HabitTrackerTableViewController.swift */,
 				0A183583286CD3AE008DD2CA /* AddHabitViewController.swift */,
@@ -300,6 +303,7 @@
 				0AED95B0286B8D770062DEE2 /* HomeViewController.swift in Sources */,
 				0AEA8AF1286CA8F00089423F /* ToDo.swift in Sources */,
 				0A183580286CB2BA008DD2CA /* ToDoTableViewController.swift in Sources */,
+				0A183588286CD848008DD2CA /* CongratsToDoViewController.swift in Sources */,
 				0AED9587286B8A9B0062DEE2 /* BossPal.xcdatamodeld in Sources */,
 				0A183586286CD531008DD2CA /* CompleteHabitViewController.swift in Sources */,
 				0AED9581286B8A9B0062DEE2 /* ViewController.swift in Sources */,

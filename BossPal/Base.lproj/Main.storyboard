@@ -163,18 +163,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S61-lB-Qub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3446.376811594203" y="1033.9285714285713"/>
+            <point key="canvasLocation" x="-3258" y="690"/>
         </scene>
-        <!--Goals-->
+        <!--Goals -->
         <scene sceneID="XRF-8S-WC4">
             <objects>
-                <tableViewController id="Ftx-kF-7Kl" customClass="ToDoTableViewController" customModule="BossPal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Goals " id="Ftx-kF-7Kl" customClass="ToDoTableViewController" customModule="BossPal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Leb-9i-T95">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Qr8-qv-udu">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="Qr8-qv-udu">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qr8-qv-udu" id="Fxg-3F-t0R">
@@ -189,11 +189,19 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Goals" id="dnF-8C-ioN">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="aRR-DK-Oq2">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrowshape.turn.up.backward.fill" catalog="system" id="wic-Jq-cSg">
                             <connections>
-                                <segue destination="tbd-81-fBq" kind="show" id="E8O-Wj-vFa"/>
+                                <segue destination="oi1-3L-rm0" kind="show" id="vNi-fv-jw0"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem id="iHu-dO-vqk"/>
+                            <barButtonItem title="Item" image="plus" catalog="system" id="aRR-DK-Oq2">
+                                <connections>
+                                    <segue destination="tbd-81-fBq" kind="show" id="E8O-Wj-vFa"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <segue destination="Orj-0h-Y8Q" kind="show" id="5Kl-wv-oDm"/>
@@ -201,7 +209,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4W-op-MpY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2274" y="1023"/>
+            <point key="canvasLocation" x="-2300" y="690"/>
         </scene>
         <!--Complete To Do View Controller-->
         <scene sceneID="8fT-Hs-VGi">
@@ -238,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sye-As-psF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2275" y="1855"/>
+            <point key="canvasLocation" x="-2300" y="1390"/>
         </scene>
         <!--Goals Initial View Controller-->
         <scene sceneID="xEM-Th-nKE">
@@ -255,20 +263,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kk8-ey-Li2">
-                                <rect key="frame" x="112" y="240" width="190" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.078431375319999996" green="0.13725490870000001" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Big goals">
-                                    <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="29"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="bigGoalsButton:" destination="oi1-3L-rm0" eventType="touchUpInside" id="xvh-ke-uyV"/>
-                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rw2-rR-gBd"/>
-                                    <segue destination="AAb-d7-0ig" kind="show" id="aj9-HI-SQP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHR-gW-4yv">
                                 <rect key="frame" x="106" y="413" width="202" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -292,6 +286,19 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IgM-p9-p6e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kk8-ey-Li2">
+                                <rect key="frame" x="106" y="252" width="190" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.078431375319999996" green="0.13725490870000001" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Big goals">
+                                    <fontDescription key="titleFontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="29"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="bigGoalsButton:" destination="oi1-3L-rm0" eventType="touchUpInside" id="AnB-Iq-xP2"/>
+                                    <segue destination="AAb-d7-0ig" kind="show" id="R05-aK-awa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -465,7 +472,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zn-xv-dLf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1086" y="2156"/>
+            <point key="canvasLocation" x="1326" y="2156"/>
         </scene>
         <!--Career Home View Controller-->
         <scene sceneID="EYu-ld-Dgn">
@@ -557,7 +564,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RR6-i7-KlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4009" y="2138"/>
+            <point key="canvasLocation" x="3136" y="2156"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XQP-Fk-Z3g">
@@ -576,10 +583,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zns-2N-bex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1262" y="1023"/>
+            <point key="canvasLocation" x="-1378" y="690"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vNi-fv-jw0"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="return" catalog="system" width="128" height="101"/>
         <systemColor name="systemBackgroundColor">

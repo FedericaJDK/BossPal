@@ -8,17 +8,19 @@
 import UIKit
 
 class HabitTableViewController: UITableViewController {
+    
     var habitsToDo: [HabitCD] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getHabits()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        getHabitsToDo()
+        getHabits()
     }
     
-    func getHabitsToDo() {
+    func getHabits() {
         
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             if let coreDataToDos = try? context.fetch(HabitCD.fetchRequest()) as? [HabitCD] {
@@ -29,15 +31,12 @@ class HabitTableViewController: UITableViewController {
         }
     }
 
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return habitsToDo.count
     }
 
@@ -53,13 +52,30 @@ class HabitTableViewController: UITableViewController {
                 cell.textLabel?.text = toDo.habitName
               }
         }
+        
        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let toDo = habitsToDo[indexPath.row]
-        performSegue(withIdentifier: "completeR", sender: toDo)
+        
+        performSegue(withIdentifier: "complete", sender: toDo)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let addVC = segue.destination as? AddHabitViewController{
+            addVC.previousVC = self;
+          }
+        
+        if let completeVC = segue.destination as? CompleteHabitsViewController {
+            if let toDo = sender as? HabitCD {
+              completeVC.selectedHabit = toDo
+              completeVC.previousVC = self
+            }
+        }
+
     }
     
 }

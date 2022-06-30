@@ -43,7 +43,7 @@ class HabitTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "rIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseId", for: indexPath)
 
         let toDo = habitsToDo[indexPath.row]
         
@@ -53,14 +53,14 @@ class HabitTableViewController: UITableViewController {
               } else {
                 cell.textLabel?.text = toDo.habit
               }
-            return cell
         }
-        
-        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-            let toDo = habitsToDo[indexPath.row]
-            
-            performSegue(withIdentifier: "completeR", sender: habitsToDo)
-        }
+       
+        return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let toDo = habitsToDo[indexPath.row]
+        performSegue(withIdentifier: "moveToComplete", sender: toDo)
+    }
+    
 }

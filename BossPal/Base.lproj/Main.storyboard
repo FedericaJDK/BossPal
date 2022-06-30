@@ -336,7 +336,7 @@
                     <navigationItem key="navigationItem" title="habit tracker" id="Jh5-LV-SYx">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="74I-wo-w5d">
                             <connections>
-                                <segue destination="q2Q-AD-aPI" kind="show" id="ZGB-P2-qHg"/>
+                                <segue destination="q2Q-AD-aPI" kind="show" identifier="ReuseId" id="ZGB-P2-qHg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -432,7 +432,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="commit"/>
                                 <connections>
-                                    <action selector="addButton:" destination="q2Q-AD-aPI" eventType="touchUpInside" id="ZkP-ST-VRF"/>
+                                    <action selector="addButton:" destination="q2Q-AD-aPI" eventType="touchUpInside" id="dVV-Dz-o42"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -441,10 +441,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="em2-6H-51P"/>
                     <connections>
+                        <outlet property="importantLabel" destination="DR9-ZH-LQ2" id="QRN-Pq-6Af"/>
+                        <outlet property="importantSwitch" destination="etg-Ph-Xwt" id="ORW-5V-SYR"/>
                         <outlet property="priorityLabel" destination="DR9-ZH-LQ2" id="MIz-Ta-sx1"/>
-                        <outlet property="switchImportant" destination="etg-Ph-Xwt" id="TGw-cn-XIH"/>
-                        <outlet property="titleLabel" destination="xCh-ce-PSu" id="bEP-64-qK1"/>
-                        <outlet property="titleTextField" destination="VmN-bK-NYU" id="ovK-9M-orU"/>
+                        <outlet property="titleLabel" destination="xCh-ce-PSu" id="w5d-xS-bDG"/>
+                        <outlet property="titleTextField" destination="VmN-bK-NYU" id="Ygn-89-ZBy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GII-pw-KLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

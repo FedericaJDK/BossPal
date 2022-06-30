@@ -12,32 +12,33 @@ class AddHabitViewController: UIViewController {
     
     var previousVC = HabitTableViewController()
 
-    @IBOutlet weak var priorityLabel: UILabel!
-    @IBOutlet weak var switchImportant: UISwitch!
+    @IBOutlet weak var importantSwitch: UISwitch!
     @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var titleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var importantLabel: UILabel!
     
     @IBAction func addButton(_ sender: Any) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
-        }
+    }
         let context = appDelegate.persistentContainer.viewContext
     
         let toDo = ToDoCD(context: context)
         
         toDo.habit = titleTextField.text
-        toDo.important = switchImportant.isOn
+        toDo.important = importantSwitch.isOn
         
         appDelegate.saveContext()
         
         navigationController?.popViewController(animated: true)
     }
-    
+
     /*
     // MARK: - Navigation
 

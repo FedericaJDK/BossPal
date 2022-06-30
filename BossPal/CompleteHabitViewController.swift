@@ -2,21 +2,35 @@
 //  CompleteHabitViewController.swift
 //  BossPal
 //
-//  Created by Federica D’Alvano on 6/29/22.
+//  Created by Federica D’Alvano on 6/30/22.
 //
 
 import UIKit
 
 class CompleteHabitViewController: UIViewController {
-
-    @IBOutlet weak var goalNameLabel: UILabel!
+    
+    var previousVC = HabitTableViewController()
+    var selectedHabitsToDo : ToDoCD?
+    
+    @IBOutlet weak var goalName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        goalName.text = selectedHabitsToDo?.habit
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func completeButton(_ sender: Any) {
+    @IBAction func completeBtn(_ sender: Any) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let context = appDelegate.persistentContainer.viewContext
+        
+        if let theToDo = selectedHabitsToDo{
+            context.delete(theToDo)
+        }
     }
     
     /*

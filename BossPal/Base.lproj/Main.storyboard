@@ -313,7 +313,7 @@
         <!--habit tracker-->
         <scene sceneID="aje-tv-N8N">
             <objects>
-                <tableViewController id="bgD-GU-HHV" customClass="HabitTrackerTableViewController" customModule="BossPal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bgD-GU-HHV" customClass="HabitTableViewController" customModule="BossPal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="m9F-T9-VD9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -369,6 +369,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Complete"/>
                                 <connections>
+                                    <action selector="completeBtn:" destination="N0F-Nw-sIr" eventType="touchUpInside" id="FaF-PF-v8v"/>
                                     <action selector="completeButton:" destination="N0F-Nw-sIr" eventType="touchUpInside" id="cBC-Gm-AOw"/>
                                     <action selector="completeTapped:" destination="Orj-0h-Y8Q" eventType="touchUpInside" id="0tO-PB-3dJ"/>
                                 </connections>
@@ -379,6 +380,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YR6-mP-tXe"/>
                     <connections>
+                        <outlet property="goalName" destination="bXt-8e-oX0" id="UIg-AZ-MwA"/>
                         <outlet property="goalNameLabel" destination="bXt-8e-oX0" id="Lwa-hA-mMu"/>
                     </connections>
                 </viewController>
@@ -430,8 +432,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="commit"/>
                                 <connections>
-                                    <action selector="addButton:" destination="q2Q-AD-aPI" eventType="touchUpInside" id="US8-nf-6I7"/>
-                                    <action selector="addTapped:" destination="tbd-81-fBq" eventType="touchUpInside" id="ZI0-0S-xaS"/>
+                                    <action selector="addButton:" destination="q2Q-AD-aPI" eventType="touchUpInside" id="ZkP-ST-VRF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -440,10 +441,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="em2-6H-51P"/>
                     <connections>
-                        <outlet property="habitTextField" destination="VmN-bK-NYU" id="wwr-lx-Wse"/>
-                        <outlet property="priorityLabel" destination="DR9-ZH-LQ2" id="eph-ea-Lp3"/>
-                        <outlet property="switchImportant" destination="etg-Ph-Xwt" id="6GJ-ys-daS"/>
-                        <outlet property="titleLabel" destination="xCh-ce-PSu" id="5nn-Ux-a6X"/>
+                        <outlet property="priorityLabel" destination="DR9-ZH-LQ2" id="MIz-Ta-sx1"/>
+                        <outlet property="switchImportant" destination="etg-Ph-Xwt" id="TGw-cn-XIH"/>
+                        <outlet property="titleLabel" destination="xCh-ce-PSu" id="bEP-64-qK1"/>
+                        <outlet property="titleTextField" destination="VmN-bK-NYU" id="ovK-9M-orU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GII-pw-KLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

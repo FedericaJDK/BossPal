@@ -136,6 +136,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="habitTextField:" destination="uMc-5d-nSv" eventType="editingDidEnd" id="LHL-BN-eX1"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Priority!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOq-fd-1d7">
                                 <rect key="frame" x="66" y="293" width="99" height="26"/>
@@ -147,6 +150,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z7X-Z1-7Ly">
                                 <rect key="frame" x="266" y="288" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="importantSwitch:" destination="uMc-5d-nSv" eventType="valueChanged" id="Jg2-b8-F7X"/>
+                                </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EG-nz-BbU">
                                 <rect key="frame" x="144" y="327" width="127" height="46"/>
@@ -170,6 +176,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S61-lB-Qub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="uMc-5d-nSv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-3261" y="402"/>
         </scene>
@@ -312,7 +319,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mzD-et-3RR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rIdentifier" id="mzD-et-3RR">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mzD-et-3RR" id="jPS-DV-xDH">
@@ -410,16 +417,6 @@
                                     <action selector="switchPriority:" destination="q2Q-AD-aPI" eventType="valueChanged" id="gza-Ah-pKo"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4l-gH-lgp">
-                                <rect key="frame" x="144" y="271" width="127" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="commit"/>
-                                <connections>
-                                    <action selector="addButton:" destination="q2Q-AD-aPI" eventType="touchUpInside" id="rsn-bV-jll"/>
-                                    <action selector="addTapped:" destination="tbd-81-fBq" eventType="touchUpInside" id="ZI0-0S-xaS"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="what new habit do yoou want to build?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCh-ce-PSu">
                                 <rect key="frame" x="40" y="56" width="335" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -427,13 +424,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4l-gH-lgp">
+                                <rect key="frame" x="144" y="271" width="127" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="commit"/>
+                                <connections>
+                                    <action selector="addButton:" destination="q2Q-AD-aPI" eventType="touchUpInside" id="US8-nf-6I7"/>
+                                    <action selector="addTapped:" destination="tbd-81-fBq" eventType="touchUpInside" id="ZI0-0S-xaS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qhs-c7-wn7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="em2-6H-51P"/>
                     <connections>
+                        <outlet property="habitTextField" destination="VmN-bK-NYU" id="wwr-lx-Wse"/>
                         <outlet property="priorityLabel" destination="DR9-ZH-LQ2" id="eph-ea-Lp3"/>
+                        <outlet property="switchImportant" destination="etg-Ph-Xwt" id="6GJ-ys-daS"/>
                         <outlet property="titleLabel" destination="xCh-ce-PSu" id="5nn-Ux-a6X"/>
                     </connections>
                 </viewController>

@@ -6,32 +6,38 @@
 //
 
 import UIKit
+import CoreData
 
 class AddHabitViewController: UIViewController {
-
+    var previousVC = HabitTrackerTableViewController()
+    
     @IBOutlet weak var priorityLabel: UILabel!
+    
+    @IBOutlet weak var switchImportant: UISwitch!
+    @IBOutlet weak var habitTextField: UITextField!
     @IBOutlet weak var titleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let context = appDelegate.persistentContainer.viewContext
     
-    @IBAction func habitText(_ sender: Any) {
+        let toDo = HabitCD(context: context)
+        
+        toDo.name = habitTextField.text
+        toDo.important = switchImportant.isOn
+        
+        appDelegate.saveContext()
+        
+        navigationController?.popViewController(animated: true)
+
     }
-    @IBAction func switchPriority(_ sender: Any) {
-    }
+
     @IBAction func addButton(_ sender: Any) {
     }
+    // Do any additional setup after loading the view.
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+    

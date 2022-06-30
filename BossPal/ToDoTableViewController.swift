@@ -65,7 +65,7 @@ class ToDoTableViewController: UITableViewController {
     
         let toDo = toDos[indexPath.row]
         
-        performSegue(withIdentifier: "completeR", sender: toDo)
+        performSegue(withIdentifier: "moveToComplete", sender: toDo)
     }
     
     /*

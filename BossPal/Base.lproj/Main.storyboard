@@ -336,7 +336,7 @@
                     <navigationItem key="navigationItem" title="habit tracker" id="Jh5-LV-SYx">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="74I-wo-w5d">
                             <connections>
-                                <segue destination="q2Q-AD-aPI" kind="show" identifier="ReuseId" id="ZGB-P2-qHg"/>
+                                <segue destination="q2Q-AD-aPI" kind="show" id="9dU-7c-M1c"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -381,7 +381,6 @@
                     <navigationItem key="navigationItem" id="YR6-mP-tXe"/>
                     <connections>
                         <outlet property="goalName" destination="bXt-8e-oX0" id="UIg-AZ-MwA"/>
-                        <outlet property="goalNameLabel" destination="bXt-8e-oX0" id="Lwa-hA-mMu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EX-up-Ogu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -477,7 +476,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="habitTrackerButton:" destination="oi1-3L-rm0" eventType="touchUpInside" id="TcQ-9i-4QG"/>
-                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o4V-6B-Qb5"/>
                                     <segue destination="MNY-VW-RIy" kind="show" id="JlW-Ke-ci1"/>
                                 </connections>
                             </button>

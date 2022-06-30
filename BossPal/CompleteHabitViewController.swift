@@ -10,19 +10,19 @@ import UIKit
 class CompleteHabitViewController: UIViewController {
     
     var previousVC = HabitTableViewController()
-    var selectedHabitsToDo : ToDoCD?
+    var selectedHabitsToDo : HabitCD?
     
     @IBOutlet weak var goalName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        goalName.text = selectedHabitsToDo?.habit
+        goalName.text = selectedHabitsToDo?.habitName
         // Do any additional setup after loading the view.
     }
     
     @IBAction func completeBtn(_ sender: Any) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        /*guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
         
@@ -30,7 +30,26 @@ class CompleteHabitViewController: UIViewController {
         
         if let theToDo = selectedHabitsToDo{
             context.delete(theToDo)
+        }*/
+          
+        /* guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
         }
+        
+        let context = appDelegate.persistentContainer.viewContext
+        
+        if let theHabit = selectedHabitsToDo{
+            context.delete(theHabit)
+        } */
+        
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            if let theToDo = selectedHabitsToDo {
+              context.delete(theToDo)
+              
+            }
+          }
+ 
+    
     }
     
     /*
@@ -42,5 +61,6 @@ class CompleteHabitViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }

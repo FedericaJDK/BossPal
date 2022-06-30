@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="HabitCD" representedClassName="HabitCD" syncable="YES" codeGenerationType="class">
+        <attribute name="habitName" optional="YES" attributeType="String"/>
+        <attribute name="priority" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
     <entity name="ToDoCD" representedClassName="ToDoCD" syncable="YES" codeGenerationType="class">
         <attribute name="habit" optional="YES" attributeType="String"/>
         <attribute name="important" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -7,5 +11,6 @@
     </entity>
     <elements>
         <element name="ToDoCD" positionX="-54" positionY="-9" width="128" height="74"/>
+        <element name="HabitCD" positionX="-45" positionY="27" width="128" height="59"/>
     </elements>
 </model>

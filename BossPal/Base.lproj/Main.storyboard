@@ -364,14 +364,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qt1-Jr-QYG">
-                                <rect key="frame" x="164" y="182" width="87" height="31"/>
+                                <rect key="frame" x="164" y="187" width="87" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Complete"/>
                                 <connections>
-                                    <action selector="completeBtn:" destination="N0F-Nw-sIr" eventType="touchUpInside" id="FaF-PF-v8v"/>
-                                    <action selector="completeButton:" destination="N0F-Nw-sIr" eventType="touchUpInside" id="cBC-Gm-AOw"/>
-                                    <action selector="completeTapped:" destination="Orj-0h-Y8Q" eventType="touchUpInside" id="0tO-PB-3dJ"/>
+                                    <action selector="completeBtn:" destination="N0F-Nw-sIr" eventType="touchUpInside" id="fBu-or-yJG"/>
+                                    <segue destination="ul2-Nc-eOb" kind="show" id="hR6-zI-CVT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -385,7 +384,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EX-up-Ogu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2287" y="2859"/>
+            <point key="canvasLocation" x="-2288.4057971014495" y="2858.7053571428569"/>
+        </scene>
+        <!--Congrats Habit View Controller-->
+        <scene sceneID="Fvr-Lb-8yb">
+            <objects>
+                <viewController id="ul2-Nc-eOb" customClass="CongratsHabitViewController" customModule="BossPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eGL-Db-Jo6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rn5-0g-mYG">
+                                <rect key="frame" x="195" y="273" width="67" height="141"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="backToGoalsTapped:" destination="ul2-Nc-eOb" eventType="touchUpInside" id="6DB-qh-9Au"/>
+                                    <action selector="backToGoalsTapped:" destination="T53-Hd-aNX" eventType="touchUpInside" id="pPn-PG-KT2"/>
+                                    <segue destination="bgD-GU-HHV" kind="show" id="diD-MC-asB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="svt-SE-5Yi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nLb-gg-gVr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFi-zQ-EIH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="T53-Hd-aNX" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1384.0579710144928" y="2865.4017857142858"/>
         </scene>
         <!--Add Habit View Controller-->
         <scene sceneID="q8h-s5-qjn">
@@ -400,9 +429,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="habitText:" destination="q2Q-AD-aPI" eventType="editingDidEnd" id="9dk-MN-IqC"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Priority!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR9-ZH-LQ2">
                                 <rect key="frame" x="66" y="237" width="99" height="26"/>
@@ -414,9 +440,6 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="etg-Ph-Xwt">
                                 <rect key="frame" x="266" y="232" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="switchPriority:" destination="q2Q-AD-aPI" eventType="valueChanged" id="gza-Ah-pKo"/>
-                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="what new habit do yoou want to build?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCh-ce-PSu">
                                 <rect key="frame" x="40" y="56" width="335" height="105"/>
@@ -443,7 +466,7 @@
                         <outlet property="importantLabel" destination="DR9-ZH-LQ2" id="QRN-Pq-6Af"/>
                         <outlet property="importantSwitch" destination="etg-Ph-Xwt" id="ORW-5V-SYR"/>
                         <outlet property="titleLabel" destination="xCh-ce-PSu" id="w5d-xS-bDG"/>
-                        <outlet property="titleTextField" destination="VmN-bK-NYU" id="Ygn-89-ZBy"/>
+                        <outlet property="titleTextField" destination="VmN-bK-NYU" id="92e-S0-hcG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GII-pw-KLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -812,7 +835,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="hR6-zI-CVT"/>
         <segue reference="JFE-j7-ka0"/>
+        <segue reference="diD-MC-asB"/>
         <segue reference="50p-Ag-TCi"/>
     </inferredMetricsTieBreakers>
     <resources>

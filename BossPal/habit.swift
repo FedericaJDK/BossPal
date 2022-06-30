@@ -8,6 +8,6 @@
 import UIKit
 
 class Habit {
-    var name = ""
+    var habitName = ""
     var priority = false
 }

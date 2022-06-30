@@ -8,11 +8,10 @@
 import UIKit
 
 class HabitTableViewController: UITableViewController {
-    var habitsToDo: [ToDoCD] = []
+    var habitsToDo: [HabitCD] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getHabitsToDo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,7 +21,7 @@ class HabitTableViewController: UITableViewController {
     func getHabitsToDo() {
         
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-            if let coreDataToDos = try? context.fetch(ToDoCD.fetchRequest()) as? [ToDoCD] {
+            if let coreDataToDos = try? context.fetch(HabitCD.fetchRequest()) as? [HabitCD] {
                 habitsToDo = coreDataToDos
                 tableView.reloadData()
                 
@@ -47,11 +46,11 @@ class HabitTableViewController: UITableViewController {
 
         let toDo = habitsToDo[indexPath.row]
         
-        if let habitName = toDo.habit {
-            if toDo.important {
+        if let habitName = toDo.habitName {
+            if toDo.priority {
                 cell.textLabel?.text = "❗️" + habitName
               } else {
-                cell.textLabel?.text = toDo.habit
+                cell.textLabel?.text = toDo.habitName
               }
         }
        

@@ -29,10 +29,10 @@ class AddHabitViewController: UIViewController {
     }
         let context = appDelegate.persistentContainer.viewContext
     
-        let toDo = ToDoCD(context: context)
+        let toDo = HabitCD(context: context)
         
-        toDo.habit = titleTextField.text
-        toDo.important = importantSwitch.isOn
+        toDo.habitName = titleTextField.text
+        toDo.priority = importantSwitch.isOn
         
         appDelegate.saveContext()
         

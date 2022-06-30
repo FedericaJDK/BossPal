@@ -442,7 +442,6 @@
                     <connections>
                         <outlet property="importantLabel" destination="DR9-ZH-LQ2" id="QRN-Pq-6Af"/>
                         <outlet property="importantSwitch" destination="etg-Ph-Xwt" id="ORW-5V-SYR"/>
-                        <outlet property="priorityLabel" destination="DR9-ZH-LQ2" id="MIz-Ta-sx1"/>
                         <outlet property="titleLabel" destination="xCh-ce-PSu" id="w5d-xS-bDG"/>
                         <outlet property="titleTextField" destination="VmN-bK-NYU" id="Ygn-89-ZBy"/>
                     </connections>

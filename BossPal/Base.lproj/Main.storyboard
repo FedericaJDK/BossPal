@@ -341,17 +341,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="N0F-Nw-sIr" kind="show" identifier="completeR" id="o9Q-Oy-ulj"/>
+                        <segue destination="N0F-Nw-sIr" kind="show" identifier="complete" id="o9Q-Oy-ulj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRI-UK-MQb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2300" y="2134"/>
         </scene>
-        <!--Complete Habit View Controller-->
+        <!--Complete Habits View Controller-->
         <scene sceneID="XKk-gn-3DQ">
             <objects>
-                <viewController id="N0F-Nw-sIr" customClass="CompleteHabitViewController" customModule="BossPal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="N0F-Nw-sIr" customClass="CompleteHabitsViewController" customModule="BossPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tDk-pm-sl2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -369,7 +369,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Complete"/>
                                 <connections>
-                                    <action selector="completeBtn:" destination="N0F-Nw-sIr" eventType="touchUpInside" id="fBu-or-yJG"/>
+                                    <action selector="completeBtn:" destination="N0F-Nw-sIr" eventType="touchUpInside" id="hwN-Mk-shJ"/>
                                     <segue destination="ul2-Nc-eOb" kind="show" id="hR6-zI-CVT"/>
                                 </connections>
                             </button>
@@ -379,7 +379,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YR6-mP-tXe"/>
                     <connections>
-                        <outlet property="goalName" destination="bXt-8e-oX0" id="UIg-AZ-MwA"/>
+                        <outlet property="goalName" destination="bXt-8e-oX0" id="w0S-Zx-4Ub"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EX-up-Ogu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -627,6 +627,58 @@
             </objects>
             <point key="canvasLocation" x="2392.753623188406" y="1506.6964285714284"/>
         </scene>
+        <!--How To Choose College View Controller-->
+        <scene sceneID="Mu3-k2-YKk">
+            <objects>
+                <viewController id="uJp-21-Rc6" customClass="HowToChooseCollegeViewController" customModule="BossPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xXo-I9-UVZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Making a college choice can be a very crucial decision as it can help you achieve your goals." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebD-5a-eaa">
+                                <rect key="frame" x="25" y="135" width="364" height="229"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rS-L1-oif">
+                                <rect key="frame" x="158" y="606" width="98" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Learn More"/>
+                                <connections>
+                                    <action selector="learnMoreButton:" destination="uJp-21-Rc6" eventType="touchUpInside" id="Rqy-Cp-IDx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to chose the right college" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdD-nk-iNd">
+                                <rect key="frame" x="91" y="84" width="232" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When choosing a college keep in mind: location, desired major, interests and oportunities available." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaT-OQ-WYU">
+                                <rect key="frame" x="58" y="389" width="299" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rcR-Vw-Ocp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mfw-7m-OmX"/>
+                    <connections>
+                        <outlet property="textLabel" destination="ebD-5a-eaa" id="ayv-76-dK2"/>
+                        <outlet property="titleLabel" destination="NdD-nk-iNd" id="Q9p-vX-WEW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSu-eT-FQS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869.56521739130437" y="1978.7946428571427"/>
+        </scene>
         <!--College Home View Controller-->
         <scene sceneID="N9B-O5-wFP">
             <objects>
@@ -653,6 +705,7 @@
                                 <connections>
                                     <action selector="howToButton:" destination="8Co-md-kF0" eventType="touchUpInside" id="sQw-kL-kBF"/>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5A-PY-QXA"/>
+                                    <segue destination="uJp-21-Rc6" kind="show" id="H2y-ki-BtT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFV-46-ICe">
@@ -707,11 +760,11 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="10" translatesAutoresizingMaskIntoConstraints="NO" id="3ah-V2-cqP">
-                                <rect key="frame" x="27" y="-20" width="360" height="308"/>
+                                <rect key="frame" x="49" y="-110" width="317" height="514"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfr-jg-nLJ">
-                                <rect key="frame" x="8" y="158" width="394" height="585"/>
+                                <rect key="frame" x="10" y="158" width="394" height="585"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="48T-z5-ZZK"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="5Yt-JR-aqZ"/>
@@ -871,6 +924,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="o9Q-Oy-ulj"/>
         <segue reference="JFE-j7-ka0"/>
         <segue reference="diD-MC-asB"/>
         <segue reference="50p-Ag-TCi"/>
